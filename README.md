@@ -1,12 +1,15 @@
 # agones-on-gke
 
+A slightly modified, end-to-end, example following the [agones.dev](https://agones.dev/site/docs/) documentation.
+
 ```
 export COMPUTE_ZONE=northamerica-northeast1-a
 export CLUSTER_NAME=agones
 
 gcloud config set compute/zone $COMPUTE_ZONE
 
-gcloud container clusters create $CLUSTER_NAME --cluster-version=1.15 \
+gcloud container clusters create $CLUSTER_NAME \
+  --cluster-version=1.15 \
   --tags=game-server \
   --scopes=gke-default \
   --enable-autoscaling \
