@@ -3,6 +3,9 @@
 A slightly modified, end-to-end, example following the [agones.dev](https://agones.dev/site/docs/) documentation.
 
 ```
+git clone https://github.com/MichaelMarkieta/agones-on-gke.git
+cd agones-on-gke
+
 export COMPUTE_ZONE=northamerica-northeast1-a
 export CLUSTER_NAME=agones
 
