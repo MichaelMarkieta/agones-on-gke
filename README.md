@@ -11,7 +11,7 @@ gcloud container clusters create $CLUSTER_NAME --cluster-version=1.15 \
   --scopes=gke-default \
   --enable-autoscaling \
   --min-nodes=1 \
-  --max-nodes-nodes=3 \
+  --max-nodes=3 \
   --no-enable-autoupgrade \
   --machine-type=n1-standard-4
 
@@ -22,7 +22,7 @@ gcloud container node-pools create agones-system \
   --node-labels agones.dev/agones-system=true \
   --enable-autoscaling \
   --min-nodes=1 \
-  --max-nodes-nodes=3
+  --max-nodes=3
 
 gcloud container node-pools create agones-metrics \
   --cluster=$CLUSTER_NAME \
@@ -31,7 +31,7 @@ gcloud container node-pools create agones-metrics \
   --node-labels agones.dev/agones-metrics=true \
   --enable-autoscaling \
   --min-nodes=1 \
-  --max-nodes-nodes=3
+  --max-nodes=3
 
 gcloud config set container/cluster $CLUSTER_NAME
 gcloud container clusters get-credentials $CLUSTER_NAME
