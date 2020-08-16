@@ -49,8 +49,4 @@ gcloud compute firewall-rules create game-server-firewall \
 
 helm repo add agones https://agones.dev/chart/stable
 helm install agones --namespace agones-system --create-namespace agones/agones
-
-# kubectl create -f gameserver.yaml
-# kubectl create -f fleet.yaml
-# kubectl create -f gameserverallocation.yaml
 ```
