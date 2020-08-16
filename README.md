@@ -19,7 +19,7 @@ gcloud container clusters create $CLUSTER_NAME \
   --min-nodes=1 \
   --max-nodes=3 \
   --no-enable-autoupgrade \
-  --machine-type=n1-standard-4
+  --machine-type=e2-standard-2
 
 gcloud container node-pools create agones-system \
   --cluster=$CLUSTER_NAME \
